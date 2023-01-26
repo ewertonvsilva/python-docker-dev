@@ -3,6 +3,6 @@ Use this setup to develop a python code running in a container, without having t
 
 
 ```
-git clone 
+git clone https://github.com/ewertonvsilva/python-docker-dev.git
 docker-compose up
 ```
