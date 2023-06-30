@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Define the list of URLs
+urls=(
+    "https://example.com/api/endpoint1"
+    "https://example.com/api/endpoint2"
+    "https://example.com/api/endpoint3"
+)
+
+# Print the table header
+printf "%-40s %s\n" "URL" "JSON Result"
+
+# Iterate over the URLs
+for url in "${urls[@]}"; do
+    # Fetch the JSON result using curl
+    json_result=$(curl -s "$url")
+
+    # Print the URL and JSON result in the table format
+    printf "%-40s %s\n" "$url" "$json_result"
+done
