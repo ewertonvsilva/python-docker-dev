@@ -1,13 +1,39 @@
-[
+{ "backup_folder": "backup_1",
+  "release" :
+[   
+
     {
-        "action": "copy",
-        "source": "/path/to/source/file",
-        "destination": "/path/to/destination/file",
-        "permissions": "0644"
+        "source": "folder1",
+        "destination": "new_folder1",
+        "permissions": "0777"
     },
     {
-        "action": "create",
-        "destination": "/path/to/new/file",
-        "permissions": "0666"
+        "source": "file1.txt",
+        "destination": "new_folder1/file1.txt",
+        "permissions": "0777"
+    },
+    {
+        "source": "file2.txt",
+        "destination": "new_folder1/file2.txt",
+        "permissions": "0777"
+    },
+    {
+        "source": "folder2",
+        "destination": "new_folder1/folder2",
+        "permissions": "0777"
+    },
+    {
+        "source": "folder2/file3.txt",
+        "destination": "new_folder1/folder2/file3.txt",
+        "permissions": "0777"
+    },
+    {
+        "source": "folder2/file4.txt",
+        "destination": "new_folder1/folder2/file4.txt",
+        "permissions": "0777"
+    },     {
+        "source": "file1.txt",
+        "destination": "new_file1.txt",
+        "permissions": "0777"
     }
-]
+] }
