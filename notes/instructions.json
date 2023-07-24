@@ -1,0 +1,13 @@
+[
+    {
+        "action": "copy",
+        "source": "/path/to/source/file",
+        "destination": "/path/to/destination/file",
+        "permissions": "0644"
+    },
+    {
+        "action": "create",
+        "destination": "/path/to/new/file",
+        "permissions": "0666"
+    }
+]
