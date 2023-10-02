@@ -39,3 +39,15 @@ if __name__ == "__main__":
     prefix_filter = "file"  # Replace with the prefix you want to filter (e.g., "file")
 
     list_files(database_path, folder=folder_filter, prefix=prefix_filter)
+
+
+# Set display options
+pd.set_option('display.line_number', False)
+pd.set_option('display.colheader_justify', 'left')
+
+# Reorder columns
+desired_column_order = ['C', 'B', 'A']
+df = df[desired_column_order]
+
+# Print the modified DataFrame
+print(df)
