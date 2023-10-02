@@ -1,0 +1,26 @@
+import sqlite3
+
+# Create an SQLite database connection
+conn = sqlite3.connect('mydatabase.db')  # Replace 'mydatabase.db' with your desired database name
+cursor = conn.cursor()
+
+# Create a table (adjust the schema to match your data)
+cursor.execute('''CREATE TABLE IF NOT EXISTS mytable (
+                  id INTEGER PRIMARY KEY,
+                  name TEXT,
+                  age INTEGER
+                )''')
+
+# Sample data in a list of tuples
+data = [
+    ('John', 30),
+    ('Alice', 25),
+    ('Bob', 28)
+]
+
+# Insert data from the list into the database
+for row in data:
+    cursor.execute("INSERT INTO mytable (name, age) VALUES (?, ?)", row)
+
+conn.commit()  # Commit the changes to the database
+conn.close()
